@@ -16,6 +16,7 @@ export default function Crash({ data }: Props) {
       }}
     >
       hehe: {address}
+      data: {data}
     </div>
   );
 }
