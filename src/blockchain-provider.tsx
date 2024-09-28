@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react";
-import { config, projectId } from "@/dapp";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
@@ -12,6 +11,8 @@ import { createAppKit } from "@reown/appkit/react";
 
 // Setup queryClient
 const queryClient = new QueryClient();
+
+const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 
 if (!projectId) throw new Error("Project ID is not defined");
 
@@ -54,7 +55,10 @@ export default function Web3ModalProvider({
   initialState?: State;
 }) {
   return (
-    <WagmiProvider config={config} initialState={initialState}>
+    <WagmiProvider
+      config={wagmiAdapter.wagmiConfig}
+      initialState={initialState}
+    >
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </WagmiProvider>
   );
