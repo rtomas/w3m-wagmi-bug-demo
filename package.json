@@ -9,16 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.55.4",
-    "@web3modal/wagmi": "^5.1.7",
-    "next": "14.2.9",
+    "@reown/appkit": "^1.0.4",
+    "@reown/appkit-adapter-wagmi": "^1.0.4",
+    "@tanstack/react-query": "^5.56.2",
+    "@wagmi/connectors": "^5.1.14",
+    "@wagmi/core": "^2.13.8",
+    "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
-    "viem": "^2.21.4",
-    "wagmi": "^2.12.9"
+    "viem": "^2.21.15",
+    "wagmi": "^2.12.16"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^22",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "encoding": "^0.1.13",
