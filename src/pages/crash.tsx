@@ -1,13 +1,15 @@
 import { modal } from "@/blockchain-provider";
 import { GetServerSideProps } from "next";
-import { useAccount } from "wagmi";
+import { useAppKitAccount } from "@reown/appkit/react";
+import { useState, useEffect } from 'react'
+
 
 interface Props {
   data: string;
 }
 
 export default function Crash({ data }: Props) {
-  const { address } = useAccount();
+  const { address } = useAppKitAccount();
 
   return (
     <div
@@ -15,6 +17,7 @@ export default function Crash({ data }: Props) {
         modal.open();
       }}
     >
+      
       hehe: {address}
       data: {data}
     </div>
